@@ -89,7 +89,7 @@ def png_to_json_vision(temp_folder):
 
 if __name__ == '__main__':
     if(len(sys.argv) < 3):
-        print("Usage: python3 planda.py <pdf_path> <plan_name> <site_dir>")
+        print("Usage: python3 main.py <pdf_path> <plan_name> <site_dir>")
         sys.exit(1)
     
    
@@ -98,7 +98,7 @@ if __name__ == '__main__':
     site_dir_name = sys.argv[3]
 
     if plan_name == "" or pdf_path == "" or site_dir_name == "":
-        print("Usage: python3 planda.py <pdf_path> <plan_name> <site_dir>")
+        print("Usage: python3 main.py <pdf_path> <plan_name> <site_dir>")
         sys.exit(1)
 
     print("Converting SBC")
@@ -130,7 +130,7 @@ if __name__ == '__main__':
         json_object = json.loads(jsonResult)
     except:
         print("Could not generate parsable data from file. Try again?")
-        quit()
+        sys.exit(1)
 
     environment = jinja2.Environment(loader=jinja2.FileSystemLoader("templates/"))
     template = environment.get_template("planTemplate.html")

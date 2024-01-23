@@ -5,7 +5,7 @@
 ### Usage
 
 ```
-python3 planda.py <pdf_path> <plan_name> <site_dir>
+python3 main.py <pdf_path> <plan_name> <site_dir>
 ```
 
 Where pdf_path is the path to the Summary of Benefits and Coverage (SBC) PDF, plan_name is the name of the insurance plan, and site_dir is the output directory for the webpage and associated files.
